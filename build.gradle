@@ -43,6 +43,10 @@ application {
     mainClassName = 'mapstruct.App'
 }
 
+compileJava {
+    options.compilerArgs << '-Amapstruct.unmappedTargetPolicy=IGNORE'
+}
+
 test {
     // Use junit platform for unit tests
     useJUnitPlatform()
